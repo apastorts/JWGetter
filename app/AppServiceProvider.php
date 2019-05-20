@@ -1,6 +1,6 @@
 <?php
 
-namespace Apastorts\JWGetter\Providers;
+namespace Apastorts\JWGetter;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../../config/database.php', 'database'
+            __DIR__.'/../config/database.php', 'database'
         );
 
         $this->commands([

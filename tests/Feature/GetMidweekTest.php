@@ -4,7 +4,7 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Apastorts\JWGetter\Meeting;
+use Apastorts\JWGetter\Model\Meeting;
 
 class GetMidWeekTest extends TestCase
 {

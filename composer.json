@@ -42,7 +42,7 @@
         },
         "laravel": {
             "providers": [
-                "Apastorts\\JWGetter\\Providers\\AppServiceProvider"
+                "Apastorts\\JWGetter\\AppServiceProvider"
             ]
         }
     },

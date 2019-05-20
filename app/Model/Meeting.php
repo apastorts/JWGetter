@@ -1,6 +1,6 @@
 <?php
 
-namespace Apastorts\JWGetter;
+namespace Apastorts\JWGetter\Model;
 
 use Illuminate\Database\Eloquent\Model;
 

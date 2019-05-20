@@ -4,7 +4,7 @@ namespace Apastorts\JWGetter\Controllers;
 
 use PHPHtmlParser\Dom;
 use Illuminate\Support\Carbon;
-use Apastorts\JWGetter\Meeting;
+use Apastorts\JWGetter\Model\Meeting;
 
 class MidweekController
 {
