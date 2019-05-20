@@ -13,7 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->publishes([
+            __DIR__.'/../../config/database.php' => config_path('jwgetter.php'),
+            ]);
     }
 
     /**
@@ -24,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/database.php', 'database'
+            __DIR__.'/../../config/database.php', 'jwgetter'
         );
     }
 }
