@@ -20,6 +20,16 @@ class TalkService
         $talk = str_replace('the ,', 'the sample conversation,', $talk);
         $talk = str_replace('the . ()', 'the sample conversation.', $talk);
 
+        $talk = str_replace(': video (', ' (', $talk);
+        $talk = str_replace('the .', 'the video.', $talk);
+
+        $talk = str_replace('Ideas para conversar (', '(', $talk);
+        $talk = str_replace('sección “”', 'sección "Ideas para conversar"', $talk);
+
+        $talk = str_replace('()', '', $talk);
+        $talk = str_replace('“', '', $talk);
+        $talk = str_replace('“”', '', $talk);
+
         return $talk;
     }
 
