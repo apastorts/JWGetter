@@ -1,18 +1,18 @@
 {
-    "name": "laravel-zero/laravel-zero",
-    "description": "The Laravel Zero Framework.",
-    "keywords": ["framework", "laravel", "laravel zero", "console", "cli"],
-    "homepage": "https://laravel-zero.com",
+    "name": "apastorts/jwgetter",
+    "description": "Get Midweek meetings schedule from wol.org.",
+    "keywords": ["jwgetter", "laravel", "laravel zero", "console", "cli"],
+    "homepage": "https://thegoodson.com.au",
     "type": "project",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/laravel-zero/laravel-zero/issues",
-        "source": "https://github.com/laravel-zero/laravel-zero"
+        "issues": "https://gitlab.com/humop/jwgetter/issues",
+        "source": "https://gitlab.com/humop/jwgetter"
     },
     "authors": [
         {
-            "name": "Nuno Maduro",
-            "email": "enunomaduro@gmail.com"
+            "name": "Abel Pastor Orts",
+            "email": "apastorts@gmail.com"
         }
     ],
     "require": {
