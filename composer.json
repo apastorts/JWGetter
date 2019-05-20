@@ -36,6 +36,16 @@
             "Tests\\": "tests/"
         }
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "beta"
+        },
+        "laravel": {
+            "providers": [
+                "Jwgetter\\App\\Providers\\AppServiceProvider"
+            ]
+        }
+    },
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,
