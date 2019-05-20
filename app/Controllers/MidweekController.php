@@ -66,13 +66,9 @@ class MidweekController
         return $living;
     }
 
-    public static function saveMeeting(Array $meeting, $date){
-
-        $meeting = new Meeting();
-        $meeting->date = $date;
-        $meeting->metadata = json_encode($meeting);
-        $meeting->save();
-
+    public static function saveMeeting(Array $meeting, $date)
+    {
+        Meeting::firstOrCreate(['date' => $date],['metadata' => json_encode($meeting)]);
     }
 
     private static function getTalk($talk)

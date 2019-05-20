@@ -15,7 +15,7 @@ class GetMidweekMeeting extends Command
      *
      * @var string
      */
-    protected $signature = 'get:midweek {date?}';
+    protected $signature = 'get:midweek {date?} {language?}';
 
     /**
      * The description of the command.
@@ -32,8 +32,14 @@ class GetMidweekMeeting extends Command
     public function handle()
     {
         $date = $this->argument('date') ?  new Carbon\Carbon($this->argument('date'))  : now();
-
-        $url = 'https://wol.jw.org/es/wol/dt/r4/lp-s/'.$date->year.'/'.$date->month.'/'.$date->day;
+        $language = $this->argument('language') ?  $this->argument('language')  : 'en';
+        if($language == 'en'){
+            $url = 'https://wol.jw.org/'.$language.'/wol/dt/r1/lp-e/'.$date->year.'/'.$date->month.'/'.$date->day;
+        }
+        else{
+            $url = 'https://wol.jw.org/'.$language.'/wol/dt/r4/lp-s/'.$date->year.'/'.$date->month.'/'.$date->day;
+        }
+        
         $html = (new Dom())->loadFromUrl($url);
         
         $meeting['treasures'] = MidweekController::getTreasures($html);
