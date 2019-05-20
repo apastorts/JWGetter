@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
         );
 
         $this->commands([
-            Apastorts\JWGetter\Commands\GetMidweekMeeting::class
+            Commands\GetMidweekMeeting::class
         ]);
     }
 }
