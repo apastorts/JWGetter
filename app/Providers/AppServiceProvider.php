@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Apastorts\JWGetter\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

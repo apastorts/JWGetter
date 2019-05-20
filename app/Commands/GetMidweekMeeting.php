@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Commands;
+namespace Apastorts\JWGetter\Commands;
 
 use Illuminate\Console\Scheduling\Schedule;
 use LaravelZero\Framework\Commands\Command;
-use App\Controllers\MidweekController;
+use Apastorts\JWGetter\Controllers\MidweekController;
 use Carbon;
 use PHPHtmlParser\Dom;
 

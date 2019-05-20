@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Commands;
+namespace Apastorts\JWGetter\Commands;
 
 use Illuminate\Console\Scheduling\Schedule;
 use LaravelZero\Framework\Commands\Command;

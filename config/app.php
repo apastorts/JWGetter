@@ -53,7 +53,7 @@ return [
     */
 
     'providers' => [
-        App\Providers\AppServiceProvider::class,
+        Apastorts\JWGetter\Providers\AppServiceProvider::class,
     ],
 
 ];

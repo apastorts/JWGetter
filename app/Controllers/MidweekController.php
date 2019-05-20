@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Controllers;
+namespace Apastorts\JWGetter\Controllers;
 
 use PHPHtmlParser\Dom;
 use Illuminate\Support\Carbon;
-use App\Meeting;
+use Apastorts\JWGetter\Meeting;
 
 class MidweekController
 {
