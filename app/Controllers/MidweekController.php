@@ -85,6 +85,6 @@ class MidweekController
      */
     public static function saveMeeting(Array $meeting, $date)
     {
-        Schedule::firstOrCreate(['date' => $date],['metadata' => json_encode($meeting)]);
+        Schedule::firstOrCreate(['date' => $date->startOfWeek()],['metadata' => json_encode($meeting)]);
     }
 }
