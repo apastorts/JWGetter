@@ -4,7 +4,7 @@ namespace Apastorts\JWGetter\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Meeting extends Model
+class Schedule extends Model
 {
     protected $guarded = [];
 }

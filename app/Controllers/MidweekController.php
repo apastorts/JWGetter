@@ -4,7 +4,7 @@ namespace Apastorts\JWGetter\Controllers;
 
 use PHPHtmlParser\Dom;
 use Illuminate\Support\Carbon;
-use Apastorts\JWGetter\Model\Meeting;
+use Apastorts\JWGetter\Model\Schedule;
 use Apastorts\JWGetter\Services\TalkService;
 
 class MidweekController
@@ -85,6 +85,6 @@ class MidweekController
      */
     public static function saveMeeting(Array $meeting, $date)
     {
-        Meeting::firstOrCreate(['date' => $date],['metadata' => json_encode($meeting)]);
+        Schedule::firstOrCreate(['date' => $date],['metadata' => json_encode($meeting)]);
     }
 }

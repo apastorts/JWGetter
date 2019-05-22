@@ -5,7 +5,7 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class GetMidweekTest extends TestCase
+class GetMidweekCommandTest extends TestCase
 {
     use RefreshDatabase;
     
@@ -14,9 +14,9 @@ class GetMidweekTest extends TestCase
      */
     public function it_gets_trasures()
     {
-        $this->artisan('get:midweek')
+        $this->artisan('get:midweek ')
             ->expectsOutput('Meeting of '.now()->toDateTimeString())
-            ->expectsOutput('TESOROS DE LA BIBLIA')
+            ->expectsOutput('TREASURES FROM GOD’S WORD')
             ->assertExitCode(0);
     }
 
@@ -27,7 +27,7 @@ class GetMidweekTest extends TestCase
     {
         $this->artisan('get:midweek')
             ->expectsOutput('Meeting of '.now()->toDateTimeString())
-            ->expectsOutput('SEAMOS MEJORES MAESTROS')
+            ->expectsOutput('APPLY YOURSELF TO THE FIELD MINISTRY')
             ->assertExitCode(0);
     }
 
@@ -38,7 +38,7 @@ class GetMidweekTest extends TestCase
     {
         $this->artisan('get:midweek')
             ->expectsOutput('Meeting of '.now()->toDateTimeString())
-            ->expectsOutput('SEAMOS MEJORES MAESTROS')
+            ->expectsOutput('LIVING AS CHRISTIANS')
             ->assertExitCode(0);
     }
 

@@ -4,7 +4,7 @@ namespace Tests\Feature;
 
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Apastorts\JWGetter\Model\Meeting;
+use Apastorts\JWGetter\Model\Schedule;
 
 class GetMidWeekTest extends TestCase
 {
@@ -15,10 +15,10 @@ class GetMidWeekTest extends TestCase
      */
     public function it_creates_a_database_record_with_the_meeting()
     {
-        $this->assertEquals(0, Meeting::all()->count());
+        $this->assertEquals(0, Schedule::all()->count());
 
         $this->artisan('get:midweek');
 
-        $this->assertEquals(1, Meeting::all()->count());
+        $this->assertEquals(1, Schedule::all()->count());
     }
 }
