@@ -11,7 +11,7 @@ class TalkService
 
     public static function organize($talk)
     {
-        $talk = self::strip($talk);
+        $talk = $talk ? self::strip($talk) : '' ;
 
         $talk = str_replace(': video (', ' (', $talk);
         $talk = str_replace('the .', 'the video.', $talk);
@@ -54,7 +54,7 @@ class TalkService
                         else{
                             return $talk->find('strong')[0]->find('em')[0]->text.$talk->find('a')[0]->text.$talk->text;
                         }
-                    } 
+                    }
                 }
                 else{
                     if($talk->find('a')[0]->find('strong')  && $talk->find('a')[0]->find('strong')->count() > 0){
@@ -62,8 +62,8 @@ class TalkService
                     }
                     else{
                         return $talk->find('strong')[0]->text.$talk->find('a')[0]->text.$talk->text;
-                    } 
-                }  
+                    }
+                }
             }
             else{
                 if($talk->find('strong')[0]->find('em') && $talk->find('strong')[0]->find('em')->count() > 0){
@@ -77,7 +77,7 @@ class TalkService
                         else{
                             return $talk->find('strong')[0]->find('em')[0]->text.$talk->find('a')[0]->text;
                         }
-                    } 
+                    }
                 }
                 else{
                     if($talk->find('a')[0]->find('strong')  && $talk->find('a')[0]->find('strong')->count() > 0){
@@ -85,8 +85,8 @@ class TalkService
                     }
                     else{
                         return $talk->find('strong')[0]->text.$talk->find('a')[0]->text;
-                    } 
-                }  
+                    }
+                }
             }
         }
         elseif(!($talk->find('strong') && $talk->find('strong')->count() > 0 ) && !($talk->find('a') && $talk->find('a')->count() > 0)){
