@@ -11,7 +11,7 @@ class TalkService
 
     public static function organize($talk)
     {
-        $talk = $talk ? self::strip($talk) : '' ;
+        $talk = self::strip($talk);
 
         $talk = str_replace(': video (', ' (', $talk);
         $talk = str_replace('the .', 'the video.', $talk);
