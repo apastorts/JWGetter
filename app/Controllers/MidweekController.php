@@ -21,8 +21,8 @@ class MidweekController
 
         $treasures['title'] = ['Title',$html->find('#section2')['0']->find('h2')[0]->find('strong')[0]->text];
         $treasures['talk'] = ['Talk' , TalkService::get($html->find('#section2')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[0]->find('#p6')[0])];
-        $treasures['gems'] = [ 'Gems', TalkService::get($html->find('#section2')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[1]->find('#p10')[0])];
-        $treasures['reading'] = ['Bible Reading', TalkService::get($html->find('#section2')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[2]->find('#p14')[0])];
+        $treasures['gems'] = [ 'Gems', TalkService::get($html->find('#section2')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[1]->find('#p7')[0])];
+        $treasures['reading'] = ['Bible Reading', TalkService::get($html->find('#section2')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[2]->find('#p10')[0])];
 
         return $treasures;
     }
@@ -38,13 +38,13 @@ class MidweekController
         $teachers = [];
 
         $teachers['title'] = ['Title',$html->find('#section3')['0']->find('h2')[0]->find('strong')[0]->text];
-        $teachers['video'] = ['Video', TalkService::get($html->find('#section3')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[0]->find('#p16')[0])];
-        $teachers['assign'] = [ 'First Assignment', TalkService::get($html->find('#section3')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[1]->find('#p17')[0])];
+        $teachers['video'] = ['Video', TalkService::get($html->find('#section3')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[0]->find('#p12')[0])];
+        $teachers['assign'] = [ 'First Assignment', TalkService::get($html->find('#section3')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[1]->find('#p13')[0])];
         if($html->find('#section3')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[2]){
-          $teachers['2assign'] = ['Second Assignment', TalkService::get($html->find('#section3')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[2]->find('#p18')[0])];
+          $teachers['2assign'] = ['Second Assignment', TalkService::get($html->find('#section3')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[2]->find('#p14')[0])];
         }
         if($html->find('#section3')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[3]){
-            $teachers['3assign'] = ['Third Assignment', TalkService::get($html->find('#section3')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[3]->find('#p19')[0])];
+            $teachers['3assign'] = ['Third Assignment', TalkService::get($html->find('#section3')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[3]->find('#p15')[0])];
         }
 
         return $teachers;
@@ -60,15 +60,14 @@ class MidweekController
     {
         $living = [];
         $living['title'] = ['Title',$html->find('#section4')['0']->find('h2')[0]->find('strong')[0]->text];
-        $living['talk'] = ['Talk', TalkService::get($html->find('#section4')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[1]->find('p')[0])];
-        $living['second'] = ['Needs Or Book', TalkService::get($html->find('#section4')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[2]->find('p')[0])];
-
+        $living['talk'] = ['Talk', TalkService::get($html->find('#section4')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[1]->find('#p17')[0])];
+        $living['second'] = ['Needs Or Book', TalkService::get($html->find('#section4')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[2]->find('#p18')[0])];
         if($html->find('#section4')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[4]){
-            $living['book'] = ['Final or Book', TalkService::get($html->find('#section4')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[3]->find('p')[0])];
+            $living['book'] = ['Final or Book', TalkService::get($html->find('#section4')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[3]->find('#p19')[0])];
         }
 
         if($html->find('#section4')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[5]){
-            $living['final'] = ['Final', TalkService::get($html->find('#section4')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[4]->find('p')[0])];
+            $living['final'] = ['Final', TalkService::get($html->find('#section4')['0']->find('.pGroup')[0]->find('ul')[0]->find('li')[4]->find('#p20')[0])];
         }
 
         return $living;
